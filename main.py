@@ -82,7 +82,7 @@ def extract_and_decrypt(stego_audio, data_length, enc_len, n_repetition=5):
 if __name__ == "__main__":
     save_keys()
     bit_length, enc_len, n_repetition = encrypt_and_embed(
-        "Muhammad Narendra Budi Utomo NIM 122140050 Kriptografi RA",
+        "HALOOOOO ini teks testt",
         "audio/input.wav",
         "audio/stego.wav",
         n_repetition=5,

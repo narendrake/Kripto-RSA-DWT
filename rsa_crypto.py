@@ -4,7 +4,7 @@ import base64
 
 
 # Generate RSA key pair
-def generate_keys(key_size=2048):
+def generate_keys(key_size=4096):
     key = RSA.generate(key_size)
     private_key = key.export_key()
     public_key = key.publickey().export_key()
