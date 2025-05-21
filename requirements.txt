@@ -3,3 +3,4 @@ scipy
 pywavelets
 soundfile
 cryptography
+tkinter
