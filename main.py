@@ -82,7 +82,7 @@ def extract_and_decrypt(stego_audio, data_length, enc_len, n_repetition=5):
 if __name__ == "__main__":
     save_keys()
     bit_length, enc_len, n_repetition = encrypt_and_embed(
-        "HALOOOOO ini teks testt",
+        "HALOOOOO ini teks testt CloudConvert converts your audio files online. Amongst many others, we support MP3, M4A, WAV and WMA. You can use the options to control audio quality and file size.",
         "audio/input.wav",
         "audio/stego.wav",
         n_repetition=5,
