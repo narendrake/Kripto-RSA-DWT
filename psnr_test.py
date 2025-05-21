@@ -20,12 +20,23 @@ if __name__ == "__main__":
     original, sr1 = sf.read(original_path)
     stego, sr2 = sf.read(stego_path)
 
-    # Ensure same shape and sample rate
+    print(f"Original shape: {original.shape}")
+    print(f"Stego shape:    {stego.shape}")
+
+    # Convert both to mono if needed
+    if original.ndim > 1:
+        original = original[:, 0]
+    if stego.ndim > 1:
+        stego = stego[:, 0]
+
+    # Truncate to the same length
+    min_len = min(len(original), len(stego))
+    original = original[:min_len]
+    stego = stego[:min_len]
+
+    # Ensure same sample rate
     if sr1 != sr2:
         print("Sample rates do not match!")
-        exit(1)
-    if original.shape != stego.shape:
-        print("Audio shapes do not match!")
         exit(1)
 
     psnr = calculate_psnr(original, stego)
