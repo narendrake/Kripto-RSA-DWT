@@ -1,0 +1,5 @@
+numpy
+scipy
+pywavelets
+soundfile
+cryptography
